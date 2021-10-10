@@ -10,7 +10,7 @@ def playSound file
   if $windows
       Sound.play(file, Sound::ALIAS)
   else
-      system("aplay #{file}")
+    system("aplay #{file}> out.log 2> /dev/null")
   end
 end
 
